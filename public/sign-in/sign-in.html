@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/public/temp.css" />
+    <link rel="stylesheet" href="/public/sign-in/sign-in.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign-in</title>
+</head>
+<body>
+   
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+            <h1><span>restaurant</span></h1>
+          
+        </div>
+        <div class="nav-list">
+            <h2><a href="#home" data-after="Home" onClick="location.href='/public/menu/menu.html'">Home</a></h2>
+            <h2><a href="#menu" data-after="Menu" onClick="location.href='/public/menu/menu.html'"">Menu</a></h2>
+            <h2><a href="#sign-up" data-after="sign-up" onClick="location.href='/public/sign-up/sign-up.html'">sign-up</a></h2>
+            <h2><a href="#sign-in" data-after="sign-in" onClick="location.href='/public/sign-in/sign-in.html'">sign-in</a></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+  <ul>
+    <% if (typeof errors !='undefined'){ %>
+      <% errors.forEach(error)=>{ %>
+        <li><% errors.messege %></li>
+         <% } %>
+      
+       <% } %> 
+  </ul>
+  <form action="/public/sign-in/sign-in.html" method="POST">
+  <section id="sign-in">
+  <div class="sign-in container">
+   <div class="box">
+      <div class="head">
+       <h1>SIGN IN</h1>
+      </div>
+    <h2>please enter username: </h2><br/>
+    <input placeholder="type username..." type="text" id ="username" name="username" required>
+    <h2>please enter password: </h2><br/>
+    <input type="password" placeholder="type password..." id ="password" name="password" required><br/><br/>
+    <input type="submit" value="Sign in">
+    <a href="/public/sign-up/sign-up.html"><input type="button" value="Sign Up"></a>
+    
+    <input type="button" value="home" onClick="location.href='/public/menu/menu.html'">
+   </div>
+  </div>
+  </section>
+</form>
+</body>
+</html>
