@@ -29,7 +29,6 @@ app.post("/sign-up", (req, res) => {
 });
 // //  let errors =[];
 // try{
-
 //   // validators
 //  if(!name || !email || !password || !password2) throw new Error("please enter all fields");
 // //  {
