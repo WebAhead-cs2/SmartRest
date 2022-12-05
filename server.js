@@ -1,9 +1,9 @@
 const express = require('express');
 
 const app = express();
-const { Pool } = require('./dbConfig');
+const { Pool } = require('./database/dbConfig');
 
-const PORT = 3000;
+const PORT = 4000;
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/public', express.static(`${__dirname}/public`));
@@ -26,16 +26,6 @@ app.get('/sign-up', (req, res) => {
 app.post('/public/sign-up/sign-up.html', (req, res) => {
   const { name, email, password } = req.body;
   console.log({ name, email, password });
-  const errors = [];
-  if (!name || !email || !password) {
-    errors.push({ messege: 'please enter all fields' });
-  }
-  if (password.length < 6) {
-    errors.push({ messege: 'password should be at least 6 charcters' });
-  }
-  if (errors.length > 0) {
-    res.sendFile('/public/sign-up/sign-up.html', { errors });
-  }
 });
 
 app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
