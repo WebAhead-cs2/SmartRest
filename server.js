@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const {Pool} = require('./dbConfig');
+const {Pool, pool} = require('./dbConfig');
 const PORT = 3000;
 app.use(express.urlencoded({extended: false}));
 
@@ -15,9 +15,7 @@ app.get('/', (req, res) => {
 
   res.sendFile(__dirname + '/public/sign-in/sign-in.html');
   
-
 });
-
 
 app.get('/menu', (req, res) => {
 
@@ -31,21 +29,46 @@ app.get('/sign-up', (req, res) => {
 
 });
 
-app.post('/public/sign-up/sign-up.html', (req,res)=>{
+ app.post('/sign-up', (req,res)=>{
    let { name,email,password} = req.body;
+   console.log(req.body);
    console.log({name,email,password});
-   let errors =[];
-   if(!name || !email || !password){
-    errors.push({messege: "please enter all fields"})
+  //  if (pool.)
+   
+  });
+   // //  let errors =[];
+  // try{
 
-   }
-   if(password.length <6){
-    errors.push({messege: "password should be at least 6 charcters"})
-   }
-   if(errors.length>0){
-    res.sendFile("/public/sign-up/sign-up.html",{errors})
-   }
-  
-});
+  //   // validators
+  //  if(!name || !email || !password || !password2) throw new Error("please enter all fields");
+  // //  {
+  // //   errors.push({messege: "please enter all fields"})
+  // //  } 
+  //  if(password.length <6) throw new Error("password should be at least 6 charcters");
+  // //  {
+  // //   errors.push({messege: "password should be at least 6 charcters"})
+  // //  }
+  //  if(password !== password2) throw new Error("passwords doesnt match");
+  // //  {
+
+
+  //  db connect and check if user exist
+
+
+  // db insert ... 
+  // res.redirect()
+
+
+  //   errors.push({messege: "passwords doesnt match"})
+  //  }
+  //  if(errors.length>0)
+  //  {
+  //  } catch(err) {
+  //   res.json(err.message)
+  // }
+  //   res.send({errors},"/public/sign-up/sign-up.html")
+  //  }
+  //  console.log(errors)
+
 
 app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));

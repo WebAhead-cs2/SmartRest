@@ -18,6 +18,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+  
 }
 img {
 	height: 100%;
@@ -56,13 +57,17 @@ p {
 
 /* sign up section*/
 #sign-up .sign-up{
+  
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   padding: 2rem;
+
 }
 
 #sign-up .box{
+margin-top: 70px;
+margin-right: 50px;
 background-color: blanchedalmond;
 padding: 4rem;
 font-size: 130%;
@@ -93,6 +98,11 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30p
 #sign-up .box h2{
   margin-right: 10rem;
 }
+#sign-up .box p{
+  color:crimson;
+  font-size: 150%;
+}
+
 
 #sign-up .box input[type=button] {
   background-color:rgba(33, 0, 249, 0.24);
