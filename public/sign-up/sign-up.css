@@ -1,101 +1,122 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 html {
-	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
+
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
+
 .container {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
+
 img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
+
 p {
-	color: black;
-	font-size: 1.4rem;
-	margin-top: 5px;
-	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 0.05rem;
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
 }
+
 .section-title {
-	font-size: 4rem;
-	font-weight: 300;
-	color: black;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
 }
+
 .section-title span {
-	color: rgb(25, 0, 255);
+  color: rgb(25, 0, 255);
 }
 
 .brand h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
 }
+
 .brand h1 span {
-	color: rgb(20, 23, 220);
+  color: rgb(20, 23, 220);
 }
 
 /* sign up section*/
-#sign-up .sign-up{
+#sign-up .sign-up {
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 2rem;
+
+}
+
+#sign-up .box {
+  margin-top: 70px;
+  margin-right: 50px;
+  background-color: blanchedalmond;
+  padding: 4rem;
+  font-size: 130%;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#sign-up .box .head {
+  padding: 4rem;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(33, 0, 249, 0.24);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
 }
 
-#sign-up .box{
-background-color: blanchedalmond;
-padding: 4rem;
-font-size: 130%;
-border-radius: 10px;
-width: 500px;
-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+#sign-up .box .head h1 {
 
-#sign-up .box .head{
-    padding: 4rem;
-    width: 100%;
-    height: 120px;
-    background-color:rgba(33, 0, 249, 0.24);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-}
-
-#sign-up .box .head h1{
-    
-    font-size: 30px;
-    font-weight: 400;
-    text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
 
 }
-#sign-up .box h2{
+
+#sign-up .box h2 {
   margin-right: 10rem;
 }
 
+#sign-up .box p {
+  color: crimson;
+  font-size: 150%;
+}
+
+
 #sign-up .box input[type=button] {
-  background-color:rgba(33, 0, 249, 0.24);
+  background-color: rgba(33, 0, 249, 0.24);
   border: none;
   color: white;
   padding: 16px 32px;
@@ -115,6 +136,7 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30p
   font-size: 18px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
+
 .box.active input {
   border-radius: 5px 5px 0 0;
 }
