@@ -239,27 +239,27 @@ input:disabled {
   z-index: -1;
 }
 #menu #pizza {
-  background-image: url(/menu/imgs/pizza.jpg);
+  background-image: url(/public/menu/imgs/pizza.jpg);
   background-size: cover;
 }
 #menu #hamburger {
-  background-image: url(/menu/imgs/hamburger.jpg);
+  background-image: url(/public/menu/imgs/hamburger.jpg);
   background-size: cover;
 }
 #menu #fried-chicken {
-  background-image: url(/menu/imgs/fried-chicken.jpeg);
+  background-image: url(/public/menu/imgs/fried-chicken.jpeg);
   background-size: cover;
 }
 #menu #spaghetti {
-  background-image: url(/menu/imgs/spaghetti.jpg);
+  background-image: url(/public/menu/imgs/spaghetti.jpg);
   background-size: cover;
 }
 #menu #shawarma {
-  background-image: url(/menu/imgs/shawarma.jpg);
+  background-image: url(/public/menu/imgs/shawarma.jpg);
   background-size: cover;
 }
 #menu #falafel {
-  background-image: url(/menu/imgs/falafel.jpg);
+  background-image: url(/public/menu/imgs/falafel.jpg);
   background-size: cover;
 }
 
