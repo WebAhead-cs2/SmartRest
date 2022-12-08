@@ -5,30 +5,47 @@ const db = require('./database/connection.js');
 const crypto = require('crypto');
 const PORT = 3000;
 const app = express();
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
+const {home} = require("./public/menu/menu");
 // const validation2 = require('./public/sign-up/sign-up');
 // const { rows } = require('pg/lib/defaults');
 // const server = http.createServer(router);
 
-app.use(express.urlencoded({ extended: false }));
+
 
 app.use('/public', express.static(`${__dirname}/public`));
-app.use('/', express.static(`${__dirname}/public/menu`));
+app.use('/menu', express.static(`${__dirname}/public/menu`));
 app.use('/sign-up', express.static(`${__dirname}/public/sign-up`));
 app.use(express.static(`${__dirname}/public/sign-in`));
 
 app.get('/', (req, res) => {
+
   res.sendFile(`${__dirname}/public/menu/menu.html`);
+//   const email= req.cookies.email;
+
+//   if(!email){
+   
+//    res.status(401).send("you must log in first"+`<input type="button" href="location.href='/public/sign-up/sign-up.html'" onClick="location.href='/public/sign-up/sign-up.html'" value="try again">`);
+//   }
+//  else {
+//    res.send(home(email));
+//   //  res.sendFile(`${__dirname}/public/menu/menu.html`);
+//  }
+
 });
 
-// app.get('/menu', (req, res) => {
-//   res.sendFile(`${__dirname}/public/menu/menu.html`);
-// });
+app.get('/menu', (req, res) => {
+   res.sendFile(`${__dirname}/public/menu/menu.html`);
+ });
 
 app.get('/sign-up', (req, res) => {
   res.sendFile(`${__dirname}/public/sign-up/sign-up.html`);
 });
 
 app.get('/sign-in', (req, res) => {
+  res.cookie("email", email, { maxAge: 600000 });
   res.sendFile(`${__dirname}/public/sign-in/sign-in.html`);
 });
 
@@ -46,14 +63,14 @@ app.post('/sign-up', async (req, res) => {
   let rowsNumber = await db.query(`SELECT COUNT(*) FROM users WHERE email = $1`, [email]);
   
   if (rowsNumber.rows[0].count > 0){
-    res.send("email already exists"); 
+    res.send("email already exists"+`<input type="button" href="location.href='/public/sign-up/sign-up.html'" onClick="location.href='/public/sign-up/sign-up.html'" value="try again">`); 
   } 
   else{
   db.query(`INSERT INTO users (username, email, password) VALUES ($1, $2, $3) RETURNING *`, [username, email, hashedPassword], (error, results) => {
     if (error) {
       throw error;
     }else{
-      res.send("thank for signing up")
+      res.send("thank for signing up" +`<input type="button" href="location.href='/public/menu/menu.html'" onClick="location.href='/public/menu/menu.html'" value="Go To Home">`)
     }
     
   });
@@ -75,15 +92,16 @@ app.post("/sign-in",async(req,res)=>{
       
       if(newusers.length===0 || pass[0] !== hash)
       {
-          res.send("the use not found");
+          res.send("the user not found please, "+`<input type="button" href="location.href='/public/sign-in/sign-in.html'" onClick="location.href='/public/sign-in/sign-in.html'" value="try again">`);
       }
       else if(newusers[0]===users.rows[0].email&& pass[0]===hash)
       {
           res.redirect('/menu');
+
       }
       else
       {
-        res.send("the use not found");
+        res.send("the user not found please, "+`<input type="button" href="location.href='/public/sign-in/sign-in.html'" onClick="location.href='/public/sign-in/sign-in.html'" value="try again">`);
       }
     }
     catch(err){

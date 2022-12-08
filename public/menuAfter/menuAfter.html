@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/public/temp.css" />
-    <link rel="stylesheet" href="/public/menu/menu.css" />
+    <link rel="stylesheet" href="/public/menuAfter/menuAfter.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
   </head>
@@ -43,11 +43,11 @@
             </h2>
             <h2>
               <a
-                id="sign-inButton"
-                href="#sign-in"
-                data-after="sign-in"
-                onClick="location.href='/public/sign-in/sign-in.html'"
-                >Sign-in</a
+                id="sign-outButton"
+                href="#sign-out"
+                data-after="sign-out"
+                onClick="location.href='/public/menu/menu.html'"
+                >Sign-out</a
               >
             </h2>
           </div>
@@ -150,7 +150,7 @@
     <section id="rate-us">
       <div class="rate-container">
         <div class="rate-top">
-          <h1 class="section-title">Our Customer <span>Reviews</span></h1>
+          <h1 class="section-title">Our Customer<span>Reviews</span></h1>
           <p></p>
         </div>
         <div class="rate-bottom">
@@ -177,9 +177,14 @@
           </div>
 
         </div></br></br>
-        <div class="cant-Review">
-          <h2>To submit your review, please <a href="location.href='/public/sign-in/sign-in.html'">sign-in</a></h2>
-        </div>
+        <form action="/review" method="post">
+          <div>
+        <div class="review">
+          <h6 class="section-title">please, <span>Rate-us</span>and add a <span>Reviews</span></h6>
+           <textarea name="comment" id="comment" cols="20" rows="10" form="usrform" class="form-control" style="background-color: rgb(255, 253, 253);">Write review here...</textarea>
+           <input type="submit" value="Post">
+          </div>
+        </form>
       </div>
     </section><br><br>
 
@@ -195,5 +200,6 @@
         </div>
       </div>
     </section>
+   <script type="text/javascript" src="/public/menuAfter/menuAfter.js"></script>
   </body>
 </html>
