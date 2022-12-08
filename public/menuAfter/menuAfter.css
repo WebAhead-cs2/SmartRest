@@ -46,9 +46,6 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
-  /* width: 200%; */
-  /* align-items: center;
-  margin-right: 300px; */
 }
 .section-title span {
   color: rgb(25, 0, 255);
@@ -74,47 +71,51 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .home-container .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: grid;
+  display:grid;
   text-align: center;
   margin-top: 100px;
 }
-.home-container .header h1 {
+ .home-container .header h1{
   letter-spacing: 3px;
   font-size: 400%;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} 
 
-.home-container .header p {
+.home-container .header p{
   line-height: 1.2;
   letter-spacing: 1px;
   font-size: 300%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS",sans-serif;
 }
-#home .home-container .header .buttons {
-  padding: 10rem;
+#home .home-container .header .buttons{
+  padding:10rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
+  
+
 }
-#home .home-container .header .buttons a input {
-  margin-right: 20px;
+#home .home-container .header .buttons a input{
+  margin-right: 20px ;
   font-size: 300%;
 }
 input {
-  background-color: #e9e00a;
+  
+  background-color: #E9E00A;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
@@ -122,10 +123,10 @@ input {
   color: #084fdc;
   cursor: pointer;
   display: inline-block;
-  font-family: "Comic Sans MS", sans-serif;
-  font-size: 200%;
+  font-family: "Comic Sans MS",sans-serif;
+  font-size:200%;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: .8px;
   line-height: 20px;
   margin: 0;
   outline: none;
@@ -135,7 +136,7 @@ input {
   text-transform: uppercase;
   touch-action: manipulation;
   transform: translateZ(0);
-  transition: filter 0.2s;
+  transition: filter .2s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
@@ -143,7 +144,8 @@ input {
   width: 270px;
 }
 
-input:after {
+
+ input:after {
   background-clip: padding-box;
   background-color: #1c73f6;
   border: solid transparent;
@@ -163,7 +165,7 @@ input:focus {
   user-select: auto;
 }
 
-input:hover:not(:disabled) {
+ input:hover:not(:disabled) {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
 }
@@ -172,14 +174,17 @@ input:disabled {
   cursor: auto;
 }
 
+
+
 .home-container .home-img img {
   border-radius: 10px;
   size: 10%;
   width: 500px;
   height: 300px;
-  margin-top: 5rem;
-  margin-right: 5rem;
+  margin-top:5rem ;
+  margin-right:5rem ;
 }
+
 
 /* menu Section */
 
@@ -299,6 +304,7 @@ input:disabled {
   margin: 0 auto;
   padding: 100px 0;
   size: 300%;
+
 }
 #rate-us .rate p {
   font-size: 200%;
@@ -306,7 +312,6 @@ input:disabled {
 #rate-us .rate-top {
   max-width: 500px;
   margin: 0 auto;
-  justify-content: center;
 }
 #rate-us .rate-bottom {
   width: 100%;
@@ -318,7 +323,7 @@ input:disabled {
 }
 #rate-us .rate-container .rate-bottom .rate-item {
   flex-basis: 80%;
-  display: flex;
+  display:flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
@@ -330,7 +335,7 @@ input:disabled {
   z-index: 1;
   overflow: hidden;
   height: 80%;
-  width: 200%;
+  width:  200%;
 }
 #rate-us .rate-container .rate-bottom .rate-item::after {
   content: "";
@@ -338,37 +343,35 @@ input:disabled {
   left: 0;
   top: 0;
   height: 100%;
-  width: 300%;
-  background-image: linear-gradient(60deg, #e9e00a 0%, #485563 100%);
+  width:  300%;
+  background-image: linear-gradient(60deg, #E9E00A 0%, #485563 100%);
   opacity: 0.6;
   z-index: -1;
   display: flex;
 }
 
-#rate-us .rate-container .cant-Review {
+#rate-us .rate-container .review {
   display: grid;
-  font-size: 200%;
-  color: white;
-}
-#rate-us .rate-container .cant-Review h2 {
-  font-weight: lighter;
 }
 
-#rate-us .rate-container .review .section-title {
+#rate-us .rate-container .review .section-title{
   text-align: left;
   justify-content: left;
   align-items: left;
 }
-#rate-us .rate-container .review h6 {
+#rate-us .rate-container .review h6{
   text-align: left;
   font-size: 2.5rem;
+
 }
 
-#contact-us .contact-container .info {
+#contact-us .contact-container .info{
   justify-content: center;
   align-items: center;
+  
+  
 }
-#contact-us .contact-container .info h1 {
+#contact-us .contact-container .info  h1{
   font-size: 200%;
   text-align: left;
 }
