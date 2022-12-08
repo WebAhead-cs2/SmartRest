@@ -6,97 +6,196 @@
     <link rel="stylesheet" href="/public/temp.css" />
     <link rel="stylesheet" href="/menu/menu.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>menu</title>
+    <title>Main Page</title>
   </head>
   <body>
-    
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-            <h1><span>restaurant</span></h1>
-          
-        </div>
-        <div class="nav-list">
-          <h2><a href="#home" data-after="Home" onClick="location.href='/public/menu/menu.html'">Home</a></h2>
-          <h2><a href="#menu" data-after="Menu" onClick="location.href='/public/menu/menu.html'"">Menu</a></h2>
-          <h2><a href="#sign-up" data-after="sign-up" onClick="location.href='/public/sign-up/sign-up.html'">sign-up</a></h2>
-          <h2><a href="#sign-in" data-after="sign-in" onClick="location.href='/public/sign-in/sign-in.html'">sign-in</a></h2>
+    <!-- Header -->
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="brand">
+            <h1><span>SmartRest</span></h1>
+          </div>
+          <div class="nav-list">
+            <h2>
+              <a
+                href="#home"
+                data-after="Home"
+               
+                >Home</a
+              >
+            </h2>
+            <h2><a href="#menu" data-after="Menu">Our dishes</a></h2>
+            <h2>
+              <a
+                href="#rate-us"
+                data-after="rate-us"
+                
+                >Rate us</a
+              >
+            </h2>
+            <h2>
+              <a
+                href="#contact-us"
+                data-after="contact-us"
+                >Contact us</a
+              >
+            </h2>
+            <h2>
+              <a
+                href="#sign-in"
+                data-after="sign-in"
+                onClick="location.href='/public/sign-in/sign-in.html'"
+                >Sign-in</a
+              >
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Header -->
+    </section>
+    <!-- End Header -->
+    <!-- Start home Section -->
+    <section id="home">
+      <div class="home-container">
+        <div class="header">
+          <h1>Mix the Joy with your Food</h1></br>
+          <p>
+            SmartRest, a modernistic way to have your food that made with love,
+            Satisfaction and happiness of our precious customer is our goal.
+            Always remember to to give us your feedback.
+          </p>
+          <div class="buttons">
+            <a href="#menu"> <input type="button" value="Menu" /> </a>
+            <a href="#rate-us"> <input type="button" value="Rate Us" /> </a>
+          </div>
+        </div>
 
-    <!-- Service Section -->
+        <div class="home-img">
+          <img
+            class="fit-picture"
+            src="/public/NewMenu/images/g-3.jpg"
+            alt="Grapefruit slice atop a pile of other slices"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- End home Section -->
+    <!-- menu Section -->
     <section id="menu">
       <div class="menu container">
         <div class="menu-top">
-          <h1 class="section-title">food <span>menu</span></h1>
-          <p>
-              Welcome to our restaurant, here is a list of our meals
-          </p>
+          <h1 class="section-title">Our <span>Dishes</span></h1>
+          <p>Welcome to our restaurant, here is a list of our meals</p>
         </div>
-          <div class="menu-bottom">
-            <div class="menu-item" id="pizza">
-              
-                <div class="icon">
-                  <img src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/null/external-pizza-party-icongeek26-linear-colour-icongeek26.png"/>
-                </div>
-                <h2>pizza</h2>
-                <p>
-                  this is the pizza description
-                </p>
-              </div>
-          <div class="menu-item" id ="hamburger">
+        <div class="menu-bottom">
+          <div class="menu-item" id="pizza">
             <div class="icon">
-              <img src="https://img.icons8.com/external-sbts2018-lineal-color-sbts2018/58/null/external-hamburger-fast-food-sbts2018-lineal-color-sbts2018-1.png"/>
+              <img
+                src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/null/external-pizza-party-icongeek26-linear-colour-icongeek26.png"
+              />
+            </div>
+            <h2>pizza</h2>
+            <p>this is the pizza description</p>
+          </div>
+          <div class="menu-item" id="hamburger">
+            <div class="icon">
+              <img
+                src="https://img.icons8.com/external-sbts2018-lineal-color-sbts2018/58/null/external-hamburger-fast-food-sbts2018-lineal-color-sbts2018-1.png"
+              />
             </div>
             <h2>hamburger</h2>
-            <p>
-              this is the hamburger description
-            </p>
+            <p>this is the hamburger description</p>
           </div>
-          <div class="menu-item" id ="fried-chicken">
+          <div class="menu-item" id="fried-chicken">
             <div class="icon">
-              <img src="https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/64/null/external-fried-chicken-fast-food-febrian-hidayat-outline-color-febrian-hidayat.png"/>
+              <img
+                src="https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/64/null/external-fried-chicken-fast-food-febrian-hidayat-outline-color-febrian-hidayat.png"
+              />
             </div>
             <h2>fried-chicken</h2>
-            <p>
-              this is the fried chicken description
-            </p>
+            <p>this is the fried chicken description</p>
           </div>
-          <div class="menu-item" id ="spaghetti">
+          <div class="menu-item" id="spaghetti">
             <div class="icon">
-              <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-spaghetti-foodies-flaticons-lineal-color-flat-icons-2.png"/>
+              <img
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-spaghetti-foodies-flaticons-lineal-color-flat-icons-2.png"
+              />
             </div>
             <h2>spaghetti</h2>
-            <p>
-              this is the spaghetti description
-            </p>
+            <p>this is the spaghetti description</p>
           </div>
-          <div class="menu-item" id = "shawarma">
+          <div class="menu-item" id="shawarma">
             <div class="icon">
-              <img src="https://img.icons8.com/plasticine/100/null/wrap.png"/>
+              <img src="https://img.icons8.com/plasticine/100/null/wrap.png" />
             </div>
             <h2>shawarma</h2>
-            <p>
-              this is the shawarma description
-            </p>
+            <p>this is the shawarma description</p>
           </div>
-          <div class="menu-item" id = "falafel">
+          <div class="menu-item" id="falafel">
             <div class="icon">
-              <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-falafel-street-food-flaticons-flat-flat-icons.png"/>
+              <img
+                src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-falafel-street-food-flaticons-flat-flat-icons.png"
+              />
             </div>
             <h2>falafel</h2>
-            <p>
-              this is the falafel description
-            </p>
+            <p>this is the falafel description</p>
           </div>
         </div>
       </div>
     </section>
     <!-- End Service Section -->
+    <section id="rate-us">
+      <div class="rate-container">
+        <div class="rate-top">
+          <h1 class="section-title">Our Customer<span>Reviews</span></h1>
+          <p></p>
+        </div>
+        <div class="rate-bottom">
+          <div class="rate-item">
+            <h2>Costomer1, 07/12/22 08:33</h2>
+            <p>Nice please and tasty food! Strongly recommended.</p>
+          </div>
+          <div class="rate-item">
+            <h2>Costomer2, 4/12/22 10:21</h2>
+            <p>Nice please and tasty food! Strongly recommended.</p>
+          </div>
+          <div class="rate-item">
+      
+            <h2>Costomer3, 08/12/22 14:41</h2>
+            <p>Nice please and tasty food! Strongly recommended.</p>
+          </div>
+          <div class="rate-item">
+            <h2>Costomer4, 28/12/22 13:03</h2>
+            <p>Nice please and tasty food! Strongly recommended.</p>
+          </div>
+          <div class="rate-item">
+            <h2>Costomer5, 28/12/22 13:03</h2>
+            <p>Nice please and tasty food! Strongly recommended.</p>
+          </div>
+
+        </div></br></br>
+        <form action="/review" method="post">
+          <div>
+        <div class="review">
+          <h6 class="section-title">please, <span>Rate-us</span>and add a <span>Reviews</span></h6>
+           <textarea name="comment" id="comment" cols="20" rows="10" form="usrform" class="form-control" style="background-color: rgb(255, 253, 253);">Write review here...</textarea>
+           <input type="submit" value="Post">
+          </div>
+        </form>
+      </div>
+    </section><br><br>
+
+    <section id="contact-us">
+      <div class="contact-container">
+        <h1 class="section-title">please, <span>Contact us</span></h1>
+        
+        <div class="info">
+            <h1>Phone : 0512352332</h1>
+            <h1>E-mail : smart@rest.com</h1>
+            <h1>Instagram : @SmartRest2022</h1>
+            <h1>Phone : 0512352332</h1>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
