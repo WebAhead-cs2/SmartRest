@@ -1,9 +1,11 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   background-color: rgb(43, 42, 42);
   font-size: 10px;
@@ -11,12 +13,15 @@ html {
   scroll-behavior: smooth;
   padding: 10rem;
 }
+
 a {
   text-decoration: none;
 }
+
 h1 {
   color: white;
 }
+
 .container {
   min-height: 100vh;
   width: 100%;
@@ -24,11 +29,13 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
 img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
 p {
   font-family: "Concert One";
   color: white;
@@ -38,6 +45,7 @@ p {
   font-weight: 300;
   letter-spacing: 0.05rem;
 }
+
 .section-title {
   font-size: 4rem;
   font-weight: 300;
@@ -47,6 +55,7 @@ p {
   letter-spacing: 0.2rem;
   text-align: center;
 }
+
 .section-title span {
   color: rgb(25, 0, 255);
 }
@@ -56,13 +65,15 @@ p {
   text-transform: uppercase;
   color: white;
 }
+
 .brand h1 span {
   color: rgb(20, 23, 220);
 }
+
 /* end heaer */
 
 .home-container {
-  /* background-image: url(/public/NewMenu/images/order-img.jpg);
+  /* background-image: url(/NewMenu/images/order-img.jpg);
   margin-right:-100px;
   margin-left:-100px;
   margin-top: 30px;
@@ -71,50 +82,54 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .home-container .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  display:grid;
+  display: grid;
   text-align: center;
   margin-top: 100px;
 }
- .home-container .header h1{
+
+.home-container .header h1 {
   letter-spacing: 3px;
   font-size: 400%;
   justify-content: center;
   align-items: center;
   text-align: center;
-} 
+}
 
-.home-container .header p{
+.home-container .header p {
   line-height: 1.2;
   letter-spacing: 1px;
   font-size: 300%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Comic Sans MS",sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
 }
-#home .home-container .header .buttons{
-  padding:10rem;
+
+#home .home-container .header .buttons {
+  padding: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  
+
 
 }
-#home .home-container .header .buttons a input{
-  margin-right: 20px ;
+
+#home .home-container .header .buttons a input {
+  margin-right: 20px;
   font-size: 300%;
 }
+
 input {
-  
+
   background-color: #E9E00A;
   border: solid transparent;
   border-radius: 16px;
@@ -123,8 +138,8 @@ input {
   color: #084fdc;
   cursor: pointer;
   display: inline-block;
-  font-family: "Comic Sans MS",sans-serif;
-  font-size:200%;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 200%;
   font-weight: 700;
   letter-spacing: .8px;
   line-height: 20px;
@@ -145,7 +160,7 @@ input {
 }
 
 
- input:after {
+input:after {
   background-clip: padding-box;
   background-color: #1c73f6;
   border: solid transparent;
@@ -165,7 +180,7 @@ input:focus {
   user-select: auto;
 }
 
- input:hover:not(:disabled) {
+input:hover:not(:disabled) {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
 }
@@ -181,8 +196,8 @@ input:disabled {
   size: 10%;
   width: 500px;
   height: 300px;
-  margin-top:5rem ;
-  margin-right:5rem ;
+  margin-top: 5rem;
+  margin-right: 5rem;
 }
 
 
@@ -192,6 +207,7 @@ input:disabled {
   flex-basis: 45%;
   margin: 2.5%;
 }
+
 #menu .menu {
   flex-direction: column;
   text-align: center;
@@ -199,13 +215,16 @@ input:disabled {
   margin: 0 auto;
   padding: 100px 0;
 }
+
 #menu .menu p {
   font-size: 200%;
 }
+
 #menu .menu-top {
   max-width: 500px;
   margin: 0 auto;
 }
+
 #menu .menu-bottom {
   display: flex;
   align-items: center;
@@ -213,6 +232,7 @@ input:disabled {
   flex-wrap: wrap;
   margin-top: 50px;
 }
+
 #menu .menu-item {
   flex-basis: 80%;
   display: flex;
@@ -227,6 +247,7 @@ input:disabled {
   z-index: 1;
   overflow: hidden;
 }
+
 #menu .menu-item::after {
   content: "";
   position: absolute;
@@ -238,28 +259,34 @@ input:disabled {
   opacity: 0.6;
   z-index: -1;
 }
+
 #menu #pizza {
-  background-image: url(/public/menu/imgs/pizza.jpg);
+  background-image: url(/menu/imgs/pizza.jpg);
   background-size: cover;
 }
+
 #menu #hamburger {
-  background-image: url(/public/menu/imgs/hamburger.jpg);
+  background-image: url(/menu/imgs/hamburger.jpg);
   background-size: cover;
 }
+
 #menu #fried-chicken {
-  background-image: url(/public/menu/imgs/fried-chicken.jpeg);
+  background-image: url(/menu/imgs/fried-chicken.jpeg);
   background-size: cover;
 }
+
 #menu #spaghetti {
-  background-image: url(/public/menu/imgs/spaghetti.jpg);
+  background-image: url(/menu/imgs/spaghetti.jpg);
   background-size: cover;
 }
+
 #menu #shawarma {
-  background-image: url(/public/menu/imgs/shawarma.jpg);
+  background-image: url(/menu/imgs/shawarma.jpg);
   background-size: cover;
 }
+
 #menu #falafel {
-  background-image: url(/public/menu/imgs/falafel.jpg);
+  background-image: url(/menu/imgs/falafel.jpg);
   background-size: cover;
 }
 
@@ -268,19 +295,23 @@ input:disabled {
   width: 80px;
   margin-bottom: 20px;
 }
+
 #menu .menu-item h2 {
   font-size: 2rem;
   color: white;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+
 #menu .menu-item p {
   color: white;
   text-align: left;
 }
+
 #menu .menu-item {
   transition: 0.3s ease transform;
 }
+
 #menu .menu-item:hover {
   transform: scale(1.1);
   cursor: pointer;
@@ -290,6 +321,7 @@ input:disabled {
   flex-basis: 45%;
   margin: 2.5%;
 }
+
 /* End menu Section */
 
 #rate-us .rate-bottom .rate-item {
@@ -297,6 +329,7 @@ input:disabled {
   margin: 2.5%;
   size: 300%;
 }
+
 #rate-us .rate {
   flex-direction: column;
   text-align: center;
@@ -306,13 +339,16 @@ input:disabled {
   size: 300%;
 
 }
+
 #rate-us .rate p {
   font-size: 200%;
 }
+
 #rate-us .rate-top {
   max-width: 500px;
   margin: 0 auto;
 }
+
 #rate-us .rate-bottom {
   width: 100%;
   display: grid;
@@ -321,9 +357,10 @@ input:disabled {
   /* flex-wrap: wrap; */
   margin-top: 50px;
 }
+
 #rate-us .rate-container .rate-bottom .rate-item {
   flex-basis: 80%;
-  display:flex;
+  display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
@@ -335,15 +372,16 @@ input:disabled {
   z-index: 1;
   overflow: hidden;
   height: 80%;
-  width:  200%;
+  width: 200%;
 }
+
 #rate-us .rate-container .rate-bottom .rate-item::after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  width:  300%;
+  width: 300%;
   background-image: linear-gradient(60deg, #E9E00A 0%, #485563 100%);
   opacity: 0.6;
   z-index: -1;
@@ -354,24 +392,26 @@ input:disabled {
   display: grid;
 }
 
-#rate-us .rate-container .review .section-title{
+#rate-us .rate-container .review .section-title {
   text-align: left;
   justify-content: left;
   align-items: left;
 }
-#rate-us .rate-container .review h6{
+
+#rate-us .rate-container .review h6 {
   text-align: left;
   font-size: 2.5rem;
 
 }
 
-#contact-us .contact-container .info{
+#contact-us .contact-container .info {
   justify-content: center;
   align-items: center;
-  
-  
+
+
 }
-#contact-us .contact-container .info  h1{
+
+#contact-us .contact-container .info h1 {
   font-size: 200%;
   text-align: left;
 }
@@ -382,30 +422,36 @@ input:disabled {
     opacity: 1;
     transform: scale(1);
   }
+
   100% {
     opacity: 0;
     transform: scale(1.4);
   }
 }
+
 @keyframes text_reveal_box {
   50% {
     width: 100%;
     left: 0;
   }
+
   100% {
     width: 0;
     left: 100%;
   }
 }
+
 @keyframes text_reveal {
   100% {
     color: white;
   }
 }
+
 @keyframes text_reveal_name {
   100% {
     color: rgb(31, 7, 249);
     font-weight: 500;
   }
 }
+
 /* End Keyframes */

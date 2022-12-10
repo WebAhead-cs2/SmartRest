@@ -18,17 +18,17 @@ function validation() {
     message.innerHTML = err;
   }
 }
-function validation2(number){
-const message = document.getElementById('errors');
-// const username = document.getElementById('username').value;
-// const email = document.getElementById('email').value;
-// const password = document.getElementById('password').value;
-// const password2 = document.getElementById('password2').value;
+function validation2(number) {
+  const message = document.getElementById('errors');
+  // const username = document.getElementById('username').value;
+  // const email = document.getElementById('email').value;
+  // const password = document.getElementById('password').value;
+  // const password2 = document.getElementById('password2').value;
 
- message.innerHTML = '';
-  try{
-  if (number.length > 0) throw "email already exists"; 
-  }catch(err){
+  message.innerHTML = '';
+  try {
+    if (number.length > 0) throw "email already exists";
+  } catch (err) {
     message.innerHTML = err;
   }
 }
@@ -63,7 +63,7 @@ module.exports = validation2;
 //    errors.push({messege: "passwords doesnt match"})
 //   }
 //   if(errors.length>0){
-//    res.sendFile("/public/sign-up/sign-up.html",{errors})
+//    res.sendFile("/sign-up/sign-up.html",{errors})
 //   }
 //   console.log(errors)
 // })

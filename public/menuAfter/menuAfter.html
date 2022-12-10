@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="/public/temp.css" />
-    <link rel="stylesheet" href="/public/menuAfter/menuAfter.css" />
+    <link rel="stylesheet" href="/temp.css" />
+    <link rel="stylesheet" href="/menuAfter/menuAfter.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
   </head>
@@ -46,7 +46,7 @@
                 id="sign-outButton"
                 href="#sign-out"
                 data-after="sign-out"
-                onClick="location.href='/public/menu/menu.html'"
+                onclick="location.href='/menu/menu.html'"
                 >Sign-out</a
               >
             </h2>
@@ -56,7 +56,7 @@
     </section>
     <!-- End Header -->
     <!-- Start home Section -->
-    <form action="/menu" id="mainmenu" method="POST">
+    <form  id="mainmenu">
       <div class="home-container">
         <div class="header">
           <h1>Mix the Joy with your Food</h1></br>
@@ -74,7 +74,7 @@
         <div class="home-img">
           <img
             class="fit-picture"
-            src="/public/NewMenu/images/g-3.jpg"
+            src="/NewMenu/images/g-3.jpg"
             alt="Grapefruit slice atop a pile of other slices"
           />
         </div>
@@ -175,17 +175,16 @@
             <h2>Costomer5, 28/12/22 13:03</h2>
             <p>Nice please and tasty food! Strongly recommended.</p>
           </div>
-
         </div></br></br>
-        <form action="/review" method="post">
-          <div>
+
+      <form action="/menuAfter" method="post">
         <div class="review">
-          <h6 class="section-title">please, <span>Rate-us</span>and add a <span>Reviews</span></h6>
-           <textarea name="comment" id="comment" cols="20" rows="10" form="usrform" class="form-control" style="background-color: rgb(255, 253, 253);">Write review here...</textarea>
-           <input type="submit" value="Post">
+          <h6 class="section-title">please, <span>Rate-us</span> and add a <span>Reviews</span></h6>
+           <textarea name="Review" id="comment" cols="20" rows="10" class="form-control" style="background-color: rgb(255, 253, 253);">Write review here...</textarea>
+           <input class="postReviewButton" type="submit" value="Post">
           </div>
-        </form>
-      </div>
+      </form>
+    </div>
     </section><br><br>
 
     <section id="contact-us">
@@ -200,6 +199,6 @@
         </div>
       </div>
     </section>
-   <script type="text/javascript" src="/public/menuAfter/menuAfter.js"></script>
+   <script type="text/javascript" src="/menuAfter/menuAfter.js"></script>
   </body>
 </html>

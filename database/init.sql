@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, blog_posts CASCADE;
+DROP TABLE IF EXISTS users, reviews CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -12,14 +12,13 @@ CREATE TABLE users (
 CREATE TABLE reviews (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id),
-  Review TEXT
-  -- PostDate dateTime.now
+  review TEXT,
+  postdate Date
 );
 
---  INSERT INTO users (username, email, password) VALUES ('saher', 'heythere@gmail.com', '123456');
+-- INSERT INTO users (username, email, password) VALUES ('aa', 'a@a', '123');
 
--- INSERT INTO reviews (text_content, user_id,Review,PostDate) VALUES
--- ;
+-- INSERT INTO reviews (user_id, Review, postDate) VALUES (1, 'random', now());
 
 COMMIT;
 

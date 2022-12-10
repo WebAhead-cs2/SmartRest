@@ -1,0 +1,15 @@
+#rate-us .rate-container .review {
+    display: grid;
+}
+
+#rate-us .rate-container .review .section-title {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+
+#rate-us .rate-container .review h6 {
+    text-align: left;
+    font-size: 2.5rem;
+
+}
