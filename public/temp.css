@@ -114,3 +114,6 @@ display: flex;
 } 
 
 /* End Header section */
+#card{
+  background-color: red;
+}

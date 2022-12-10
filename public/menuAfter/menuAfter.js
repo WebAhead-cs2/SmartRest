@@ -1,4 +1,47 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const cookieParser = require("cookie-parser");
+// const db = require('./database/connection.js');
+// const user_id = req.cookies.userId;
+// const review = req.body.Review;
+//const responseResult =  db.query(`SELECT users.username, reviews.postdate ,reviews.review FROM users INNER JOIN reviews ON users.id = reviews.user_id`);
+// console.log(responseResult.rows);
+
+
+
+
+
+
+
+
+
+
 //const db = require('../../database/connection.js');
+
+// const e = require("express");
 
 // function postAReview(){
 //         const postReviewButton = document.getElementsByClassName('postReviewButton');
@@ -16,6 +59,59 @@
 //         });
 //       }); 
 //     }
+// const reviews = [
+//   {
+//     username: 'moha',
+//     postdate: '2022-12-10T16:18:50.256Z',
+//     review: '345678909876543'
+//   },
+//   {
+//     username: 'moha',
+//     postdate: '2022-12-10T16:26:56.084Z',
+//     review: 'hello theree gooood fooood..'
+//   },
+//   {
+//     username: 'moha',
+//     postdate: '2022-12-10T16:37:06.961Z',
+//     review: '12345678asdfghjk'
+//   },
+//   {
+//     username: 'moha',
+//     postdate: '2022-12-10T16:38:27.992Z',
+//     review: 'asdfgbnmijhgbvcx'
+//   }
+// ];
+
+
+// function showReview(review){
+
+//   review.forEach(element => {
+//     console.log("posted by " + element.username+"  " +element.postdate + "  " + element.review)
+//   });
+// }
+
+
+// showReview(reviews);
+
+// function myFunction() {
+
+//   // Create an "li" node:
+//   const node = document.createElement("li");
+  
+//   // Create a text node:
+//   const textnode = document.createTextNode("Water");
+  
+//   // Append the text node to the "li" node:
+//   node.appendChild(textnode);
+  
+//   // Append the "li" node to the list:
+//   document.getElementById("myList").appendChild(node);
+//   }
+
+module.exports = showReview;
+
+
+
 // function validation() {
 //     const message = document.getElementById('errors');
 
