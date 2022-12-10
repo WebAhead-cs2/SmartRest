@@ -65,17 +65,18 @@ p {
 }
 
 /* sign in section*/
-.sign-in .sign-in-text{
+.sign-in .sign-in-text {
   display: flex;
   align-items: left;
   justify-content: left;
-  display:grid;
+  display: grid;
   text-align: left;
   margin-top: 20px;
   margin-right: 20px;
 
 }
- .sign-in .sign-in-text h1{
+
+.sign-in .sign-in-text h1 {
   letter-spacing: 3px;
   font-size: 350%;
   justify-content: center;
@@ -86,34 +87,35 @@ p {
 
 }
 
- .sign-in .sign-in-text p{
+.sign-in .sign-in-text p {
   line-height: 1.2;
   letter-spacing: 1px;
   font-size: 300%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Comic Sans MS",sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   color: white;
 
 }
 
-#sign-in{
+#sign-in {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  
-  
+
+
 }
+
 #sign-in .sign-in {
-  background-image: url(/public/NewMenu/images/signin-up-backgroundImg.jpg);
+  background-image: url(/NewMenu/images/signin-up-backgroundImg.jpg);
   width: 100%;
   height: 100%;
   padding: 2rem;
-  background-position:top;
-  
+  background-position: top;
+
 
 }
 
