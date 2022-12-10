@@ -13,7 +13,8 @@ CREATE TABLE reviews (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id),
   review TEXT,
-  postdate Date
+  postdate timestamp
+
 );
 
 -- INSERT INTO users (username, email, password) VALUES ('aa', 'a@a', '123');
