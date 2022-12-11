@@ -11,13 +11,6 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "public")));
-// const showReview = require("/public/menuAfter/menuAfter");
-//app.use('/public', express.static(`${__dirname}/public`));
-// app.use('/menu', express.static(`${__dirname}/public/menu`));
-// app.use('/menuAfter', express.static(`${__dirname}/public/menuAfter`));
-// app.use('/sign-up', express.static(`${__dirname}/public/sign-up`));
-// app.use('/sign-in',express.static(`${__dirname}/public/sign-in`));
-// app.use('/review',express.static(`${__dirname}/public/review`));
 
 app.get("/", (req, res) => {
   res.sendFile(`${__dirname}/public/menu/menu.html`);
@@ -52,17 +45,17 @@ app.get("/review", async (req, res) => {
   let str = " ";
   for (let i = 0; i < data.length; i++) {
     str +=
-      " <div class='card' style='background-color: yellow; width: 1000px; height: 160px; border-radius:10px; font-size:20px; box-shadow: 5px 10px blue;'>" +
-      data[i].username +
+      " <div class='card' style='background-color: yellow; width: 1000px; height: 160px; border-radius:10px; font-size:22px; box-shadow: 5px 10px blue; font-family: Comic Sans MS; font-weight: bold; padding:20px;'>" +
+      "posted by "+ data[i].username +
       "<br><br>" +
-      data[i].postdate +
+      data[i].postdate+
       "</br></br>" +
       data[i].review +
       "</div>"+"</br>";
       
   }
   
-  res.send("<style>background-color:grey;</style>"+"<h1 style='color:blue; font-size:150%;'>Our Reviews</h1>"+str
+  res.send("<style>background-color:grey;</style>"+"<h1 style='color:blue; font-size:300%; justify-content:center;'>Our Reviews</h1>"+str
   +"<a href='/menuAfter/menuAfter.html'><input type='button' value='back to home' style='background-color:yellow; font-size:200%; width: 300px; height: 100px; border-radius:10px;'></a>");
 });
 
