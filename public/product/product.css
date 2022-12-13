@@ -1,0 +1,114 @@
+body {
+    background-color: rgb(43, 42, 42);
+    font-size: 10px;
+    font-family: "Comic Sans MS", sans-serif;
+    scroll-behavior: smooth;
+    padding: 10rem;
+}
+
+.header {
+    background-color: yellow;
+}
+
+.home-container .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.home-container .header h1 {
+    letter-spacing: 3px;
+    font-size: 400%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-container .header p {
+    line-height: 1.2;
+    letter-spacing: 1px;
+    font-size: 300%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+#home .home-container .header .buttons {
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: larger;
+}
+
+#rate-us .rate-container .rate-bottom .rate-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300%;
+    background-image: linear-gradient(60deg, #E9E00A 0%, #485563 100%);
+    opacity: 0.6;
+    z-index: -1;
+    display: flex;
+}
+
+.buttons {
+    background-color: yellow;
+}
+
+.price {
+    text-align: center;
+}
+
+.submit {
+    background-color: yellow;
+    color: #2562A2;
+    height: 60px;
+    width: 300px;
+}
+
+#rate-us .rate-container .review {
+    display: grid;
+}
+
+#rate-us .rate-container .review .section-title {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+
+#rate-us .rate-container .review h6 {
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgb(251, 246, 246);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.section-title span {
+    color: rgb(25, 0, 255);
+}
+
+#rate-us .rate-container .review .section-title {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
