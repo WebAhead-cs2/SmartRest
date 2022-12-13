@@ -46,28 +46,32 @@ app.get("/review", async (req, res) => {
   for (let i = 0; i < data.length; i++) {
     str +=
       " <div class='card' style='background-color: yellow; width: 1000px; height: 160px; border-radius:10px; font-size:22px; box-shadow: 5px 10px blue; font-family: Comic Sans MS; font-weight: bold; padding:20px;'>" +
-      "posted by "+ data[i].username +
+      "posted by " + data[i].username +
       "<br><br>" +
-      data[i].postdate+
+      data[i].postdate +
       "</br></br>" +
       data[i].review +
-      "</div>"+"</br>";
-      
+      "</div>" + "</br>";
+
   }
-  
-  res.send("<style>background-color:grey;</style>"+"<h1 style='color:blue; font-size:300%; justify-content:center;'>Our Reviews</h1>"+str
-  +"<a href='/menuAfter/menuAfter.html'><input type='button' value='back to home' style='background-color:yellow; font-size:200%; width: 300px; height: 100px; border-radius:10px;'></a>");
+
+  res.send("<style>background-color:grey;</style>" + "<h1 style='color:blue; font-size:300%; justify-content:center;'>Our Reviews</h1>" + str
+    + "<a href='/menu/menu.html'><input type='button' value='back to home' style='background-color:yellow; font-size:200%; width: 300px; height: 100px; border-radius:10px;'></a>");
 });
 
 app.post("/sign-up", async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, password2 } = req.body;
   console.log(req.body);
 
   const hashedPassword = crypto
     .createHash("sha256")
     .update(password)
     .digest("hex");
-  console.log({ username, email, hashedPassword });
+  const hashedConfPassword = crypto
+    .createHash("sha256")
+    .update(password2)
+    .digest("hex");
+  console.log({ username, email, hashedPassword, hashedConfPassword });
 
   let rowsNumber = await db.query(
     `SELECT COUNT(*) FROM users WHERE email = $1`,
@@ -77,7 +81,13 @@ app.post("/sign-up", async (req, res) => {
   if (rowsNumber.rows[0].count > 0) {
     res.send(
       "email already exists" +
-        `<input type="button" href="location.href='/sign-up/sign-up.html'" onClick="location.href='/sign-up/sign-up'" value="try again">`
+      `<input type="button" href="location.href='/sign-up/sign-up.html'" onClick="location.href='/sign-up/sign-up.html'" value="try again">`
+    );
+  }
+  else if (hashedPassword !== hashedConfPassword) {
+    res.send(
+      "passwords doesn't match please try again" +
+      `<input type="button" href="location.href='/sign-up/sign-up.html'" onClick="location.href='/sign-up/sign-up.html'" value="try again">`
     );
   } else {
     db.query(
@@ -87,7 +97,7 @@ app.post("/sign-up", async (req, res) => {
         if (error) {
           throw error;
         } else {
-          res.redirect("/menuAfter");
+          res.redirect("/menu");
         }
       }
     );
@@ -116,7 +126,7 @@ app.post("/sign-in", async (req, res) => {
     if (newemail.length === 0 || pass !== hash || !userData) {
       res.send(
         "the user not found please, " +
-          `<input type="button" href="location.href='/public/sign-in/sign-in.html'" onClick="location.href='/public/sign-in/sign-in.html'" value="try again">`
+        `<input type="button" href="location.href='/sign-in/sign-in.html'" onClick="location.href='/sign-in/sign-in.html'" value="try again">`
       );
     }
     //else if(newemail[0]===users.rows[0].email&& pass[0]===hash)
@@ -149,7 +159,7 @@ app.post("/menuAfter", async (req, res) => {
     } else {
       res.send(
         "thanks for review" +
-          `<input type="button" href="location.href='/menuAfter/menuAfter.html'" onClick="location.href='/menuAfter/menuAfter.html'" value="Go To Home">`
+        `<input type="button" href="location.href='/menuAfter/menuAfter.html'" onClick="location.href='/menuAfter/menuAfter.html'" value="Go To Home">`
       );
     }
   } catch (err) {

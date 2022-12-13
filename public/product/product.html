@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/public/temp.css" />
+    <link rel="stylesheet" href="/public/menu/menu.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
 </head>
@@ -19,4 +21,84 @@
         </tr>
     </div>
 </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/public/product/product.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Header -->
+   <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <h1><span>SmartRest</span></h1>
+        </div>
+        <div class="nav-list">
+          <h2>
+            <a
+              href="#home"
+              data-after="Home"
+             
+              >Home</a
+            >
+          </h2>
+          <h2><a href="#menu" data-after="Menu">Our dishes</a></h2>
+          <h2>
+            <a
+              href="#rate-us"
+              data-after="rate-us"
+              
+              >Rate us</a
+            >
+          </h2>
+          <h2>
+            <a
+              href="#contact-us"
+              data-after="contact-us"
+              >Contact us</a
+            >
+          </h2>
+          <h2>
+            <a
+              href="#sign-in"
+              data-after="sign-in"
+              onClick="location.href='/public/sign-in/sign-in.html'"
+              >Sign-in</a
+            >
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+          <h1 class="section-title"> <product> </h1>
+              <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/300x300/exps25356_TH10603D13.jpg" style="width:500px;height:600px;">
+              <div class="buttons">
+                <br>  
+                  <a tex="product name"> <input type="text" value="product name" /> </a>
+                  <br><br>
+                  <a text="product datails"> <input type="text" value="product details" /> </a>
+                  <br><br>
+                  <a  class="price" text="price"> <input type="text" value="ptice"/>  </a>
+
+               </div>
+              </div></br></br>
+              <form action="/review" method="post">
+                <div>
+              <div class="review">
+                <h6 class="section-title">please, <span>Rate-us</span>and add a <span>Reviews</span></h6>
+                 <textarea name="comment" id="comment" cols="150" rows="10" form="usrform" class="form-control" style="background-color: rgb(255, 253, 253);">Write review here...</textarea>
+                 <br>
+                 <input class="submit" type="button" value="Post">
+                </div>
+              </form>
+            </div>
+          </section><br><br>
+      </body>
+  </html>
+    
